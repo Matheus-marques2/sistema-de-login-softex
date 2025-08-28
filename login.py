@@ -33,15 +33,15 @@ def login():
     print("Usuário não encontrado.")
 
 def excluir():
-    usuario = input("Digite o nome de usuário que deseja excluir: ")
+    usuario = input("Digite o nome de usuário que deseja excluir: ")       #VERIFICAÇAO DE USUÁRIO PARA EXCLUSÃO
     senha = input("Digite a senha do usuário: ")
    
     for u in usuarios:
-        if u["usuario"] == usuario and u["senha"] == senha:
+        if u["usuario"] == usuario and u["senha"] == senha:                #COMFIRMAÇAO DA EXCLUSÃO CASO LOGIN E SENHA CORRETA.
             usuarios.remove(u)
             print("🗑️ Usuário excluído com sucesso!")
             return
-    print("Usuário ou senha incorretos. Não foi possível excluir.")
+    print("Usuário ou senha incorretos. Não foi possível excluir.")        #NÃO EXCLUSÃO DO USUÁRIO (LOGIN OU SENHA INCORRETA)
 
 def listar():
     if not usuarios:
