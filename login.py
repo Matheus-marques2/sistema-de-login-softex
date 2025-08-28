@@ -18,7 +18,7 @@ def login():                                                    # usado para ten
     tentativas = 3
     usuario = input("Digite o nome de usuário: ")
    
-    for u in usuarios:                                          # usaso para repetiçoes 
+    for u in usuarios:                                          # usado para repetiçoes 
         if u["usuario"] == usuario:
             while tentativas > 0:
                 senha = input("Digite a senha: ")
@@ -51,7 +51,7 @@ def listar():
         for u in usuarios:
             print(f"- {u['usuario']}")
 
-while True:
+while True:                                                             # Loop para o menu fica reaparecendo até você mandar sair com break
     print("\n==== MENU ====")
     print("1 - Cadastrar usuário")
     print("2 - Fazer login")
@@ -59,9 +59,9 @@ while True:
     print("4 - Listar usuários")
     print("5 - Sair")
    
-    opcao = input("Escolha uma opção: ")
+    opcao = input("Escolha uma opção: ")                                   # Digita a opção desejada 
    
-    if opcao == "1":
+    if opcao == "1":                                                       # Checa a opção digitada e retorna a função correspondente.
         cadastrar()
     elif opcao == "2":
         login()
@@ -72,5 +72,6 @@ while True:
     elif opcao == "5":
         print("Saindo do sistema...")
         break
-    else:
+    else:                                                                # Tudo que não for opção, cai aqui.
+
         print("Opção inválida, tente novamente.")
