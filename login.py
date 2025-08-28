@@ -14,11 +14,11 @@ def cadastrar():                                                # def, cadrastro
     usuarios.append({"usuario": usuario, "senha": senha})       # .append conclusão do cadrastro e armazenamento
     print("Usuário cadastrado !")
 
-def login():
+def login():                                                    # usado para tentativas de erros 
     tentativas = 3
     usuario = input("Digite o nome de usuário: ")
    
-    for u in usuarios:
+    for u in usuarios:                                          # usaso para repetiçoes 
         if u["usuario"] == usuario:
             while tentativas > 0:
                 senha = input("Digite a senha: ")
